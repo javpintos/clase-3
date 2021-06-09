@@ -12,4 +12,9 @@ router.get('/apod', async function(req, res) {
     nasaController.getPictureOfTheDay(req, res);
   });
 
+/* GET Mars Picture page. */
+router.get('/mars', async function(req, res) {
+  nasaController.getMarsPicture(req, res);
+});
+
 module.exports = router;
