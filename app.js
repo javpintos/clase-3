@@ -6,6 +6,7 @@ const dotenv = require('dotenv').config();
 
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
+const nasaRouter = require('./routes/nasa');
 
 const app = express();
 
@@ -18,6 +19,7 @@ app.use(cookieParser());
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/nasa', nasaRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
